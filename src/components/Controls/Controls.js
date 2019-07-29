@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { notifyA, notifyB, notifyC } from '../toast';
+import { notifyA, notifyB, notifyC, notifyD } from '../Notification/toast';
 import styles from './Controls.module.css';
 
 class Controls extends Component {
@@ -26,6 +26,9 @@ class Controls extends Component {
       notifyA();
     } else if (name === 'Withdrawal' && value > onState) {
       notifyB();
+    } else if (value < 0) {
+      notifyD();
+      this.reset();
     } else {
       onControls({
         type: name,
