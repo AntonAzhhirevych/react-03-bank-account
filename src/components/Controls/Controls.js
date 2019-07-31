@@ -41,10 +41,6 @@ class Controls extends Component {
     }
   };
 
-  // reset = el => {
-  //   return (el.value = '');
-  // };
-
   render() {
     const { value } = this.state;
     return (
